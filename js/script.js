@@ -50,4 +50,23 @@ for (let i = 0; i < ourTeam.length; i++) {
     }
 }
 //MILESTONE 2
-
+// stampo in pagina le card del mio team
+const teamRow = document.querySelector(".row");
+// creo ciclo for per selezionare ogni oggetto dell'array
+for (let i = 0; i < ourTeam.length; i++) {
+    const currElem = ourTeam[i];
+    teamRow.innerHTML += `
+      <div class="col">
+       
+           <div class="card">
+           
+              <div class="card-img">${currElem.image}</div>
+              <h5 class="card-name">${currElem.name}</h5>
+              <h6 class="card-profession">${currElem.profession}</h6>
+        
+           </div>
+    
+      </div>
+    
+    `
+}
