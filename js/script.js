@@ -3,33 +3,33 @@
 const ourTeam = [{
     name: "Wayne Barrett",
     profession: "Founder & CEO",
-    image: "img-Wayne",
+    image: "../img/wayne-barnett-founder-ceo.jpg",
 },
 {
     name: "Angela Caroll",
     profession: "Chief Editor",
-    image: "img-Angela",
+    image: "../img/angela-caroll-chief-editor.jpg",
 },
 {
     name: "Walter Corsini",
     profession: "Office Manager",
-    image: "img-Walter",
+    image: "../img/walter-gordon-office-manager.jpg",
 
 },
 {
     name: "Angela Lopez",
     profession: "Social Media Manager",
-    image: "img-Anglea.L.",
+    image: "../img/angela-lopez-social-media-manager.jpg",
 },
 {
     name: "Scott Estrada",
     profession: "Developer",
-    image: "img-Scott",
+    image: "../img/scott-estrada-developer.jpg",
 },
 {
     name: "Barbara Ramos",
     profession: "Graphic Designer",
-    image: "img-Barbara",
+    image: "../img/barbara-ramos-graphic-designer.jpg",
 },
 ];
 // TEST
@@ -53,14 +53,22 @@ for (let i = 0; i < ourTeam.length; i++) {
 // stampo in pagina le card del mio team
 const teamRow = document.querySelector(".row");
 // creo ciclo for per selezionare ogni oggetto dell'array
+const teamCol = document.querySelector(".col");
+
+const img = document.createElement("img");
+img.classList.add("team-img");
+
 for (let i = 0; i < ourTeam.length; i++) {
     const currElem = ourTeam[i];
+    img.src = currElem.image; 
+    // Stampo in pagina grazie ai template literals gli oggetti
+    // dell' array
     teamRow.innerHTML += `
       <div class="col">
        
            <div class="card">
            
-              <div class="card-img">${currElem.image}</div>
+              <div class="card-img">${img.outerHTML}</div>
               <h5 class="card-name">${currElem.name}</h5>
               <h6 class="card-profession">${currElem.profession}</h6>
         
@@ -70,3 +78,4 @@ for (let i = 0; i < ourTeam.length; i++) {
     
     `
 }
+
