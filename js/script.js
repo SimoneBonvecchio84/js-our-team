@@ -13,7 +13,7 @@ const ourTeam = [{
 {
     name: "Walter Corsini",
     profession: "Office Manager",
-    image: "../img/walter-gordon-office-manager.jpg",
+    image: "../img/walter-corsini.jpg",
 
 },
 {
@@ -53,7 +53,6 @@ for (let i = 0; i < ourTeam.length; i++) {
 // stampo in pagina le card del mio team
 const teamRow = document.querySelector(".row");
 // creo ciclo for per selezionare ogni oggetto dell'array
-const teamCol = document.querySelector(".col");
 
 const img = document.createElement("img");
 img.classList.add("team-img");
