@@ -11,9 +11,9 @@ const ourTeam = [{
     image: "../img/angela-caroll-chief-editor.jpg",
 },
 {
-    name: "Walter Corsini",
+    name: "Walter Gordon",
     profession: "Office Manager",
-    image: "../img/walter-corsini.jpg",
+    image: "../img/walter-gordon-office-manager.jpg",
 
 },
 {
